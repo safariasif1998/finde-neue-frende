@@ -73,11 +73,13 @@ ul li a:hover{
 .content h1{
     margin-bottom: 20px;
     font-size: 40px;
+    animation-delay: 0.5s;
 }
 .content p{
     font-size: 18px;
     text-align: start;
     line-height: 30px;
+    animation-delay: 0.7s;
 }
 .join-us{
     display: inline-block;
@@ -91,7 +93,26 @@ ul li a:hover{
     border-top-right-radius: 0px;
     color: #fff;
 }
+.join-us.animation{
+    animation-delay: 1s;
+}
 
 .main-img{
     width: 100%;
+
+}
+.main-img.animation{
+    animation-delay: 1.3s;
+}
+.animation{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: MoveUp 0.5s linear forwards;
+}
+
+@keyframes MoveUp{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
