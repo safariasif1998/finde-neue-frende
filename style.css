@@ -120,7 +120,6 @@ ul li a:hover{
 
 /* Features */
 .features-title{
-
     font-size: 24px;
     text-align: center;
     margin:40px 0px 20px 0px;
@@ -139,13 +138,29 @@ ul li a:hover{
 .feat-list .list{
     display: grid;
     grid-template-columns: auto auto;
-    gap: 4px;
+    gap: 4px 40px;
 
 }
 .feat-list .list li{
     border: 1px solid #3333;
     border-radius: 5px;
     padding: 15px 15px;
+    cursor: pointer;
+    position: relative;
+}
+.feat-list .list li::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    content: "";
+    transition: 0.4s;
+    background-color: rgb(213, 213, 221);
+    z-index: -1;
+}
+.feat-list .list li:hover::after{
+    width: 100%;
 }
 .feat-list .list li .item{
     padding: 4px 0px 4px 5px;
@@ -157,3 +172,21 @@ ul li a:hover{
     font-size: 16px;
     color: rgb(221, 11, 183);
 }
+/* .list-item{
+    position: relative;
+}
+.list-item::after{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   content: "";
+   background-color: rgb(221, 11, 183);
+   transition: 0.4s;
+   z-index: -1;
+}
+.list-item:hover::after{
+    background-color: red;
+    width: 100%;
+} */
